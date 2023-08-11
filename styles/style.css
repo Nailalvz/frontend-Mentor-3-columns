@@ -1,0 +1,163 @@
+/* 
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+ */
+
+:root{
+
+    /* Primary colors */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral colors */
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /*Paragraphs*/
+    --very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+
+    /* Typografhy */
+    --lexend-deca: 'Lexend Deca', sans-serif;
+    --big-shoulders-display: 'Big Shoulders Display', cursive;
+
+    /* Text-size */
+
+    --paragraph: 15px;
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--very-light-gray);
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    width: 95rem;
+}
+
+.card{
+    width: 33.3%;
+    height: 45rem;
+    padding: 4rem 5.3rem;
+}
+
+.orange{
+    background-color: var(--bright-orange);
+}
+
+.cyan{
+    background-color: var(--dark-cyan);
+}
+
+.dark-cyan{
+    background-color: var(--very-dark-cyan);
+}
+
+.orange-text{
+    color: var(--bright-orange);
+}
+
+.cyan-text{
+    color: var(--dark-cyan);
+}
+
+.dark-cyan-text{
+    color: var(--very-dark-cyan);
+}
+
+.little-margin-bottom{
+    margin-bottom: 2.5rem;
+}
+
+.big-margin-bottom{
+    margin-bottom: 6rem;
+}
+
+.border-radius-left{
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.border-radius-right{
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.card__title{
+    font-family: var(--big-shoulders-display);
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    font-size: 2.2rem;
+}
+
+.card__text{
+    color: var(--very-light-gray);
+    font-family: var(--lexend-deca);
+    font-size: var(--paragraph);
+    font-weight: 400;
+    line-height: 2.5rem;
+}
+
+.card__button .button{
+    display: inline-block;
+    padding: 1.3rem 2.5rem;
+    background-color: var(--very-light-gray);
+    border-radius: 2.5rem;
+    font-family: var(--lexend-deca);
+    font-size: var(--paragraph);
+    border: .2rem solid transparent;
+    transition: .1s all ease;
+}
+
+.card__button .button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--very-light-gray);
+    border: .2rem solid var(--very-light-gray);
+    transition: .2s all ease;
+}
+
+@media(max-width: 375px){
+
+    main{
+        display: inline-block;
+        height: 100%;
+    }
+    
+    .container{
+        flex-direction: column;
+        width: 90%;
+        margin: 8rem auto;
+    }
+
+    .card{
+        width: 100%;
+        padding: 4rem 5rem;
+    }
+
+    .card:first-child{
+        border-radius: .5rem .5rem 0 0;
+    }
+
+    .card:last-child{
+        border-radius: 0 0 .5rem .5rem;
+    }
+}
